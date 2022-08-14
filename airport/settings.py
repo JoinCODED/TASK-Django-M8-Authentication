@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 import pathlib
-from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / ...
 BASE_DIR = pathlib.Path(__file__).parent.parent
@@ -27,18 +26,6 @@ SECRET_KEY = "t@f545aljg@yi4@k9x4!1&7vbjrx49^x&2n6@ph-58qh=2hmv$"
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
-#Authentication
-REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-    )
-}
-
-SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(hours=12),
-}
 
 
 # Application definition

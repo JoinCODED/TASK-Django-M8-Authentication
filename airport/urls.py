@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from flights import views
-from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView,)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -37,11 +36,4 @@ urlpatterns = [
         views.CancelBooking.as_view(),
         name="cancel-booking",
     ),
-
-    # path("userlogin/", views.UserLogin.as_view(), name="user-login"),
-    # path("book-flight/<int:flight_id>/", views.BookFlight.as_view(), name="book-flight"),
-    path("login/", TokenObtainPairView.as_view(), name="login"),
-    path("refresh/", TokenRefreshView.as_view(), name="refresh"),
 ]
-
-
